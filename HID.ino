@@ -114,10 +114,12 @@ void setup() {
   Keyboard.begin();
   Mouse.begin();
 
-
-
   webSocket.begin();
   webSocket.onEvent(onWsEvent);
+
+  delay(2000);
+
+  Keyboard.print(WiFi.localIP().toString());
 }
 
 void loop() {
